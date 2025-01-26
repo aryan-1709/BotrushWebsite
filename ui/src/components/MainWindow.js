@@ -33,7 +33,7 @@ export const MainWindow = () => {
           alt="Character"
           className="max-w-[400px] max-h-[400px] w-auto h-auto z-20 flex-shrink-0"
         />
-        <div className="w-[400px] h-[500px] z-20 flex-shrink-1 overflow-hidden relative">
+        <div className="w-[400px] h-[500px] z-10 flex-shrink-1 overflow-hidden relative">
           {/* Add a fade effect around the div using a gradient */}
           <div className="absolute inset-0 bg-gradient-to-t from-[#1e262a] via-transparent to-[#1e262a]  opacity-50"></div>
 

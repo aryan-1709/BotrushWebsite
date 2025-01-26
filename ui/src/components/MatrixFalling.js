@@ -22,7 +22,7 @@ const MatrixFalling = ({ width, height }) => {
 
     function draw() {
       // Translucent black background for trail effect with low opacity
-      ctx.fillStyle = "rgba(30, 38, 42, 0.2)"; // Slight transparency for the trail effect
+      ctx.fillStyle = "rgba(30, 38, 42, 0.3)"; // Slight transparency for the trail effect
       ctx.fillRect(0, 0, canvas.width, canvas.height); // Clear canvas with transparency
       
       ctx.fillStyle = "#0F0"; // Green text

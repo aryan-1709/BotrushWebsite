@@ -10,13 +10,9 @@ const BreakoutGame = () => {
     { x: 25, y: 30, width: 80, height: 20, visible: true },
     { x: 125, y: 30, width: 80, height: 20, visible: true },
     { x: 225, y: 30, width: 80, height: 20, visible: true },
-    { x: 325, y: 30, width: 80, height: 20, visible: true },
-    { x: 425, y: 30, width: 80, height: 20, visible: true },
     { x: 25, y: 60, width: 80, height: 20, visible: true },
     { x: 125, y: 60, width: 80, height: 20, visible: true },
     { x: 225, y: 60, width: 80, height: 20, visible: true },
-    { x: 325, y: 60, width: 80, height: 20, visible: true },
-    { x: 425, y: 60, width: 80, height: 20, visible: true },
   ]);
   const [ballDirection, setBallDirection] = useState({ dx: 3, dy: -3 });
   const [gameOver, setGameOver] = useState(false);
@@ -26,9 +22,9 @@ const BreakoutGame = () => {
   const gameLoopRef = useRef(null);
 
   // Game constants
-  const CANVAS_WIDTH = 530;
+  const CANVAS_WIDTH = 320;
   const CANVAS_HEIGHT = 300;
-  const PADDLE_WIDTH = 100;
+  const PADDLE_WIDTH = 70;
   const PADDLE_HEIGHT = 10;
   const BALL_RADIUS = 10;
 
@@ -45,18 +41,14 @@ const BreakoutGame = () => {
   const resetGame = () => {
     setBallPosition({ x: 200, y: 250 });
     setBallDirection({ dx: 3, dy: -3 });
-    setPaddlePosition(175);
+    setPaddlePosition(150);
     setBricks([
       { x: 25, y: 30, width: 80, height: 20, visible: true },
       { x: 125, y: 30, width: 80, height: 20, visible: true },
       { x: 225, y: 30, width: 80, height: 20, visible: true },
-      { x: 325, y: 30, width: 80, height: 20, visible: true },
-      { x: 425, y: 30, width: 80, height: 20, visible: true },
       { x: 25, y: 60, width: 80, height: 20, visible: true },
       { x: 125, y: 60, width: 80, height: 20, visible: true },
       { x: 225, y: 60, width: 80, height: 20, visible: true },
-      { x: 325, y: 60, width: 80, height: 20, visible: true },
-      { x: 425, y: 60, width: 80, height: 20, visible: true }
     ]);
     setGameOver(false);
     setGameStarted(false);
@@ -177,7 +169,7 @@ const BreakoutGame = () => {
   }, [ballPosition, paddlePosition, bricks, gameStarted, gameOver]);
 
   return (
-    <Card sx={{ maxWidth: 700, margin: 'auto', backgroundColor: 'transparent' }}>
+    <Card sx={{ maxWidth: 330, margin: 'auto', backgroundColor: 'transparent' }}>
       <CardContent
         sx={{
           backgroundColor: 'transparent', // Ensure transparent background here as well
